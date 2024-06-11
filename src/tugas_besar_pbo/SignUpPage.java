@@ -1,7 +1,7 @@
 
 package tugas_besar_pbo;
 
-import tugas_besar_pbo.LoginPage;
+import tugas_besar_pbo.Loginpage;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -219,7 +219,7 @@ public class SignUpPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        LoginPage LoginFrame = new LoginPage();
+        Loginpage LoginFrame = new Loginpage();
         LoginFrame.setVisible(true);
         LoginFrame.pack();
         LoginFrame.setLocationRelativeTo(null);

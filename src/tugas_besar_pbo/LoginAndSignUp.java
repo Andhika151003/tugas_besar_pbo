@@ -3,7 +3,7 @@ package tugas_besar_pbo;
 
 public class LoginAndSignUp {
     public static void main(String[] args) {
-        LoginPage LoginFrame = new LoginPage();
+        Loginpage LoginFrame = new Loginpage();
         LoginFrame.setVisible(true);
         LoginFrame.pack();
         LoginFrame.setLocationRelativeTo(null);
