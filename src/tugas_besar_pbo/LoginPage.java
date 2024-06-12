@@ -1,6 +1,12 @@
 
 package tugas_besar_pbo;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 public class LoginPage extends javax.swing.JFrame {
 
     public LoginPage() {
@@ -20,33 +26,38 @@ public class LoginPage extends javax.swing.JFrame {
         Right = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         Left = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        email = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        password = new javax.swing.JPasswordField();
+        Loginbutton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
-        setPreferredSize(new java.awt.Dimension(800, 500));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 500));
         jPanel1.setLayout(null);
 
-        Right.setBackground(new java.awt.Color(49, 192, 192));
+        Right.setBackground(new java.awt.Color(31, 41, 130));
         Right.setPreferredSize(new java.awt.Dimension(400, 500));
 
-        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel5.setFont(new java.awt.Font("Swis721 Blk BT", 0, 18)); // NOI18N
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Swis721 Blk BT", 0, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Barbershop Bogor");
 
         jLabel6.setFont(new java.awt.Font("SimSun", 0, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Copyright © Institut Cukur Rambut Bogor");
+
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\andhi\\OneDrive\\Dokumen\\images-removebg-preview_00000-removebg-preview.png")); // NOI18N
+        jLabel7.setText("jLabel7");
 
         javax.swing.GroupLayout RightLayout = new javax.swing.GroupLayout(Right);
         Right.setLayout(RightLayout);
@@ -55,19 +66,23 @@ public class LoginPage extends javax.swing.JFrame {
             .addGroup(RightLayout.createSequentialGroup()
                 .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(RightLayout.createSequentialGroup()
-                        .addGap(109, 109, 109)
-                        .addComponent(jLabel5))
+                        .addGap(69, 69, 69)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(RightLayout.createSequentialGroup()
                         .addGap(89, 89, 89)
-                        .addComponent(jLabel6)))
-                .addContainerGap(77, Short.MAX_VALUE))
+                        .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6))))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         RightLayout.setVerticalGroup(
             RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RightLayout.createSequentialGroup()
-                .addContainerGap(319, Short.MAX_VALUE)
+                .addContainerGap(48, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel5)
-                .addGap(92, 92, 92)
+                .addGap(120, 120, 120)
                 .addComponent(jLabel6)
                 .addGap(51, 51, 51))
         );
@@ -79,18 +94,26 @@ public class LoginPage extends javax.swing.JFrame {
         Left.setMinimumSize(new java.awt.Dimension(400, 500));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(31, 41, 130));
         jLabel1.setText("LOGIN");
 
         jLabel2.setText("Email :");
 
         jLabel3.setText("Password :");
 
-        jButton1.setBackground(new java.awt.Color(102, 255, 255));
-        jButton1.setText("Login");
+        Loginbutton.setBackground(new java.awt.Color(31, 41, 130));
+        Loginbutton.setForeground(new java.awt.Color(255, 255, 255));
+        Loginbutton.setText("Login");
+        Loginbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginbuttonActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Tidak Punya Akun?");
 
-        jButton2.setForeground(new java.awt.Color(255, 51, 51));
+        jButton2.setBackground(new java.awt.Color(31, 41, 130));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Sign up");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,10 +134,10 @@ public class LoginPage extends javax.swing.JFrame {
                         .addGap(36, 36, 36)
                         .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextField1)
+                                .addComponent(email)
                                 .addComponent(jLabel3)
-                                .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(password, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+                                .addComponent(Loginbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(LeftLayout.createSequentialGroup()
                                 .addGap(0, 170, Short.MAX_VALUE)
@@ -131,13 +154,13 @@ public class LoginPage extends javax.swing.JFrame {
                 .addGap(41, 41, 41)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(56, 56, 56)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Loginbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -146,7 +169,7 @@ public class LoginPage extends javax.swing.JFrame {
         );
 
         jPanel1.add(Left);
-        Left.setBounds(400, 0, 400, 500);
+        Left.setBounds(400, 0, 399, 500);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -163,8 +186,6 @@ public class LoginPage extends javax.swing.JFrame {
 
         jPanel1.getAccessibleContext().setAccessibleName("Login");
 
-        getAccessibleContext().setAccessibleName("Login");
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -177,14 +198,62 @@ public class LoginPage extends javax.swing.JFrame {
      this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void LoginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginbuttonActionPerformed
+          //System.out.println("Sign Up Button Has Clicked!");
+        String Email, Password, query, fname = null, passDB = null;
+        String SUrl, SUser, Spass;
+            SUrl = "jdbc:MySQL://localhost:3306/icrb";
+            SUser = "root";
+            Spass = "";
+            int notFound = 0;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection(SUrl, SUser, Spass);
+            Statement st = con.createStatement();
+            if ("".equals(email.getText())) {
+                JOptionPane.showMessageDialog(new JFrame(), "Email Harus di Isi", "Error", JOptionPane.ERROR_MESSAGE);
+            } else if ("".equals(password.getText())) {
+                JOptionPane.showMessageDialog(new JFrame(), "Password Harus di Isi", "Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                Email = email.getText();
+                Password = password.getText();
+                
+                query = "SELECT * FROM akun WHERE email='"+Email+"'";
+                ResultSet rs = st.executeQuery(query);
+                while (rs.next()) {
+                    passDB = rs.getString("password");
+                    fname = rs.getString("full_name"); 
+                    notFound = 1;
+                } 
+                if(notFound == 1 && Password.equals(passDB)) {
+                    homepage homeFrame = new homepage();
+                    homeFrame.setUser(fname);
+                    homeFrame.setVisible(true);
+                    homeFrame.pack();
+                    homeFrame.setLocationRelativeTo(null);
+                    this.dispose();
+                    
+                } else{
+                  JOptionPane.showMessageDialog(new JFrame(), "Email dan Password salah", "Error", JOptionPane.ERROR_MESSAGE);  
+                }
+                        
+                st.execute(query);
+                password.setText("");
+            }
+        } catch (Exception e) {
+            System.out.println("Error!" + e.getMessage());
+        }
+    }//GEN-LAST:event_LoginbuttonActionPerformed
+
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Left;
+    private javax.swing.JButton Loginbutton;
     private javax.swing.JPanel Right;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JTextField email;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -192,8 +261,8 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPasswordField password;
     // End of variables declaration//GEN-END:variables
 }
