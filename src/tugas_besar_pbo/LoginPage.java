@@ -45,6 +45,7 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         Right.setBackground(new java.awt.Color(31, 41, 130));
+        Right.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         Right.setPreferredSize(new java.awt.Dimension(400, 500));
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
@@ -73,12 +74,12 @@ public class LoginPage extends javax.swing.JFrame {
                         .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6))))
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         RightLayout.setVerticalGroup(
             RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RightLayout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
+                .addContainerGap(44, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
@@ -91,6 +92,7 @@ public class LoginPage extends javax.swing.JFrame {
         Right.setBounds(0, 0, 400, 500);
 
         Left.setBackground(new java.awt.Color(255, 255, 255));
+        Left.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         Left.setMinimumSize(new java.awt.Dimension(400, 500));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -140,7 +142,7 @@ public class LoginPage extends javax.swing.JFrame {
                                 .addComponent(Loginbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(LeftLayout.createSequentialGroup()
-                                .addGap(0, 170, Short.MAX_VALUE)
+                                .addGap(0, 165, Short.MAX_VALUE)
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton2)))))
@@ -165,7 +167,7 @@ public class LoginPage extends javax.swing.JFrame {
                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         jPanel1.add(Left);
@@ -200,49 +202,58 @@ public class LoginPage extends javax.swing.JFrame {
 
     private void LoginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginbuttonActionPerformed
           //System.out.println("Sign Up Button Has Clicked!");
-        String Email, Password, query, fname = null, passDB = null;
-        String SUrl, SUser, Spass;
-            SUrl = "jdbc:MySQL://localhost:3306/icrb";
-            SUser = "root";
-            Spass = "";
-            int notFound = 0;
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection(SUrl, SUser, Spass);
-            Statement st = con.createStatement();
-            if ("".equals(email.getText())) {
-                JOptionPane.showMessageDialog(new JFrame(), "Email Harus di Isi", "Error", JOptionPane.ERROR_MESSAGE);
-            } else if ("".equals(password.getText())) {
-                JOptionPane.showMessageDialog(new JFrame(), "Password Harus di Isi", "Error", JOptionPane.ERROR_MESSAGE);
-            } else {
-                Email = email.getText();
-                Password = password.getText();
-                
-                query = "SELECT * FROM akun WHERE email='"+Email+"'";
-                ResultSet rs = st.executeQuery(query);
-                while (rs.next()) {
-                    passDB = rs.getString("password");
-                    fname = rs.getString("full_name"); 
-                    notFound = 1;
-                } 
-                if(notFound == 1 && Password.equals(passDB)) {
+    String Email, Password, query, fname = null, stats = null, passDB = null;
+    String SUrl, SUser, Spass;
+    SUrl = "jdbc:MySQL://localhost:3306/icrbfinal";
+    SUser = "root";
+    Spass = "";
+    int notFound = 0;
+    try {
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection(SUrl, SUser, Spass);
+        Statement st = con.createStatement();
+        if ("".equals(email.getText())) {
+            JOptionPane.showMessageDialog(new JFrame(), "Email Harus di Isi", "Error", JOptionPane.ERROR_MESSAGE);
+        } else if ("".equals(password.getText())) {
+            JOptionPane.showMessageDialog(new JFrame(), "Password Harus di Isi", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            Email = email.getText();
+            Password = password.getText();
+            
+            query = "SELECT * FROM akun WHERE email='" + Email + "'";
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                passDB = rs.getString("password");
+                fname = rs.getString("nama"); 
+                stats = rs.getString("stats");
+                notFound = 1;
+            } 
+            if (notFound == 1 && Password.equals(passDB)) {
+                if ("admin".equals(stats)) {
+                    
                     homepage homeFrame = new homepage();
                     homeFrame.setUser(fname);
+                    homeFrame.setStats(stats);
                     homeFrame.setVisible(true);
                     homeFrame.pack();
                     homeFrame.setLocationRelativeTo(null);
-                    this.dispose();
-                    
-                } else{
-                  JOptionPane.showMessageDialog(new JFrame(), "Email dan Password salah", "Error", JOptionPane.ERROR_MESSAGE);  
+                } else if ("customer".equals(stats)) {
+                    homepage_customer homecustFrame = new homepage_customer();
+                    homecustFrame.setVisible(true);
+                    homecustFrame.pack();
+                    homecustFrame.setLocationRelativeTo(null);
                 }
-                        
-                st.execute(query);
-                password.setText("");
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(new JFrame(), "Email dan Password salah", "Error", JOptionPane.ERROR_MESSAGE);  
             }
-        } catch (Exception e) {
-            System.out.println("Error!" + e.getMessage());
+                    
+            st.execute(query);
+            password.setText("");
         }
+    } catch (Exception e) {
+        System.out.println("Error!" + e.getMessage());
+    }
     }//GEN-LAST:event_LoginbuttonActionPerformed
 
     /**

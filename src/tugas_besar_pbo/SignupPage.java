@@ -60,6 +60,7 @@ public class SignupPage extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(31, 41, 130));
+        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 500));
 
         jLabel1.setFont(new java.awt.Font("Swis721 Blk BT", 1, 24)); // NOI18N
@@ -88,12 +89,12 @@ public class SignupPage extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel10))))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(47, Short.MAX_VALUE)
+                .addContainerGap(43, Short.MAX_VALUE)
                 .addComponent(jLabel11)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
@@ -106,6 +107,7 @@ public class SignupPage extends javax.swing.JFrame {
         jPanel2.setBounds(0, 0, 400, 500);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel3.setPreferredSize(new java.awt.Dimension(400, 500));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -181,7 +183,7 @@ public class SignupPage extends javax.swing.JFrame {
                                 .addComponent(jLabel9)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,7 +220,7 @@ public class SignupPage extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel3);
@@ -244,7 +246,7 @@ public class SignupPage extends javax.swing.JFrame {
         //System.out.println("Sign Up Button Has Clicked!");
         String Stats, FullName, Alamat, Nomortelpon, Email, Password, query;
         String SUrl, SUser, Spass;
-            SUrl = "jdbc:MySQL://localhost:3306/icrb";
+            SUrl = "jdbc:MySQL://localhost:3306/icrbfinal";
             SUser = "root";
             Spass = "";
         try {
@@ -272,7 +274,7 @@ public class SignupPage extends javax.swing.JFrame {
                 Password = password.getText();
                 System.out.println(Password);
                 
-                query = "INSERT INTO akun(Stats, Full_Name, Alamat, Nomortelpon, Email, Password)" +
+                query = "INSERT INTO akun(Stats, Nama, Alamat, Nomortelpon, Email, Password)" +
                         "VALUES('"+Stats+"','"+FullName+"','"+Alamat+"','"+Nomortelpon+"','"+Email+"','"+Password+"')";
                 st.execute(query);
                 stats.setText("");

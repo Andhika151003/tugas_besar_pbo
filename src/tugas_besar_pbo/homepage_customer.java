@@ -8,7 +8,7 @@ import java.awt.Color;
 
 
 
-public class homepage extends javax.swing.JFrame {
+public class homepage_customer extends javax.swing.JFrame {
 
     /**
      * Creates new form homepage
@@ -16,7 +16,7 @@ public class homepage extends javax.swing.JFrame {
 
   Color DefaultColor,ClickedColor;
   
-    public homepage() {
+    public homepage_customer() {
         initComponents();
         DefaultColor=new Color(255,255,255);
         ClickedColor=new Color(204,204,204);
@@ -374,20 +374,23 @@ public class homepage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(homepage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(homepage_customer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(homepage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(homepage_customer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(homepage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(homepage_customer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(homepage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(homepage_customer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new homepage().setVisible(true);
+                new homepage_customer().setVisible(true);
             }
         });
     }
