@@ -8,16 +8,13 @@ import java.awt.Color;
 
 
 
-public class homepage extends javax.swing.JFrame {
 
-    /**
-     * Creates new form homepage
-     */
+public class homepage extends javax.swing.JFrame {
 
   Color DefaultColor,ClickedColor;
   
     public homepage() {
-        initComponents();
+        initComponents(); 
         DefaultColor=new Color(255,255,255);
         ClickedColor=new Color(204,204,204);
         
@@ -27,8 +24,10 @@ public class homepage extends javax.swing.JFrame {
         Menu_4.setBackground(DefaultColor);
         Menu_5.setBackground(DefaultColor);
         Menu_6.setBackground(DefaultColor);
+        
+        Stats.setBackground(DefaultColor);
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -59,7 +58,7 @@ public class homepage extends javax.swing.JFrame {
         jDesktopPane1 = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Dashboard");
+        setTitle("Dashboard_Admin");
 
         Jpanel1.setPreferredSize(new java.awt.Dimension(800, 500));
         Jpanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -83,6 +82,14 @@ public class homepage extends javax.swing.JFrame {
 
         Stats.setIcon(new javax.swing.ImageIcon("C:\\Users\\andhi\\OneDrive\\Dokumen\\images\\profile.png")); // NOI18N
         Stats.setText("Status");
+        Stats.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                StatsMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                StatsMousePressed(evt);
+            }
+        });
         jPanel1.add(Stats, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         Jpanel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, -1));
@@ -350,6 +357,17 @@ public class homepage extends javax.swing.JFrame {
         jDesktopPane1.add(pesanan_frame1).setVisible(true);
            
     }//GEN-LAST:event_pesanan_frameMouseClicked
+
+    private void StatsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StatsMouseClicked
+        
+        profilframe profil_frame1=new profilframe ();
+        jDesktopPane1.removeAll();
+        jDesktopPane1.add(profil_frame1).setVisible(true);
+    }//GEN-LAST:event_StatsMouseClicked
+
+    private void StatsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StatsMousePressed
+        Stats.setBackground(ClickedColor);
+    }//GEN-LAST:event_StatsMousePressed
     public void setUser(String Name) {
         User.setText(Name);
     }
