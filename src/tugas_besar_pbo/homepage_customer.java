@@ -79,7 +79,7 @@ public class homepage_customer extends javax.swing.JFrame {
         jPanel1.add(LogoutButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 0, 44, -1));
 
         Stats.setIcon(new javax.swing.ImageIcon("C:\\Users\\andhi\\OneDrive\\Dokumen\\images\\profile.png")); // NOI18N
-        Stats.setText("Status");
+        Stats.setText("Customer");
         Stats.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 StatsMouseClicked(evt);
@@ -347,7 +347,7 @@ public class homepage_customer extends javax.swing.JFrame {
 
     private void pesanan_frameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pesanan_frameMouseClicked
 
-        pesanan_frame pesanan_frame1=new pesanan_frame ();
+        produk_frame pesanan_frame1=new produk_frame ();
         jDesktopPane1.removeAll();
         jDesktopPane1.add(pesanan_frame1).setVisible(true);
            

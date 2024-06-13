@@ -40,6 +40,7 @@ public class profilframe extends javax.swing.JInternalFrame {
         jButton1 = new javax.swing.JButton();
         Nomor = new javax.swing.JTextField();
 
+        setTitle("Biodata");
         setPreferredSize(new java.awt.Dimension(659, 500));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));

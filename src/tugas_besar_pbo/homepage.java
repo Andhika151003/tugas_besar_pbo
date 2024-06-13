@@ -18,7 +18,7 @@ public class homepage extends javax.swing.JFrame {
         DefaultColor=new Color(255,255,255);
         ClickedColor=new Color(204,204,204);
         
-        pesanan_frame.setBackground(DefaultColor);
+        produk_frame.setBackground(DefaultColor);
         Menu_2.setBackground(DefaultColor);
         Menu_3.setBackground(DefaultColor);
         Menu_4.setBackground(DefaultColor);
@@ -53,7 +53,7 @@ public class homepage extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         Menu_6 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        pesanan_frame = new javax.swing.JPanel();
+        produk_frame = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jDesktopPane1 = new javax.swing.JDesktopPane();
 
@@ -81,7 +81,7 @@ public class homepage extends javax.swing.JFrame {
         jPanel1.add(LogoutButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 0, 44, -1));
 
         Stats.setIcon(new javax.swing.ImageIcon("C:\\Users\\andhi\\OneDrive\\Dokumen\\images\\profile.png")); // NOI18N
-        Stats.setText("Status");
+        Stats.setText("Admin");
         Stats.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 StatsMouseClicked(evt);
@@ -228,34 +228,34 @@ public class homepage extends javax.swing.JFrame {
 
         jPanel2.add(Menu_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 170, -1));
 
-        pesanan_frame.setBackground(new java.awt.Color(255, 255, 255));
-        pesanan_frame.addMouseListener(new java.awt.event.MouseAdapter() {
+        produk_frame.setBackground(new java.awt.Color(255, 255, 255));
+        produk_frame.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pesanan_frameMouseClicked(evt);
+                produk_frameMouseClicked(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                pesanan_frameMousePressed(evt);
+                produk_frameMousePressed(evt);
             }
         });
 
         jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\andhi\\OneDrive\\Dokumen\\images\\icons8-menu-24.png")); // NOI18N
-        jLabel8.setText("Pesanan");
+        jLabel8.setText("Produk");
 
-        javax.swing.GroupLayout pesanan_frameLayout = new javax.swing.GroupLayout(pesanan_frame);
-        pesanan_frame.setLayout(pesanan_frameLayout);
-        pesanan_frameLayout.setHorizontalGroup(
-            pesanan_frameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pesanan_frameLayout.createSequentialGroup()
+        javax.swing.GroupLayout produk_frameLayout = new javax.swing.GroupLayout(produk_frame);
+        produk_frame.setLayout(produk_frameLayout);
+        produk_frameLayout.setHorizontalGroup(
+            produk_frameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(produk_frameLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel8)
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
-        pesanan_frameLayout.setVerticalGroup(
-            pesanan_frameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        produk_frameLayout.setVerticalGroup(
+            produk_frameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
         );
 
-        jPanel2.add(pesanan_frame, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 170, -1));
+        jPanel2.add(produk_frame, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 170, -1));
 
         Jpanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 560));
 
@@ -296,17 +296,17 @@ public class homepage extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_LogoutButtonMouseClicked
 
-    private void pesanan_frameMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pesanan_frameMousePressed
-        pesanan_frame.setBackground(ClickedColor);
+    private void produk_frameMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_produk_frameMousePressed
+        produk_frame.setBackground(ClickedColor);
         Menu_2.setBackground(DefaultColor);
         Menu_3.setBackground(DefaultColor);
         Menu_4.setBackground(DefaultColor);
         Menu_5.setBackground(DefaultColor);
         Menu_6.setBackground(DefaultColor);
-    }//GEN-LAST:event_pesanan_frameMousePressed
+    }//GEN-LAST:event_produk_frameMousePressed
 
     private void Menu_2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu_2MousePressed
-        pesanan_frame.setBackground(DefaultColor);
+        produk_frame.setBackground(DefaultColor);
         Menu_2.setBackground(ClickedColor);
         Menu_3.setBackground(DefaultColor);
         Menu_4.setBackground(DefaultColor);
@@ -315,7 +315,7 @@ public class homepage extends javax.swing.JFrame {
     }//GEN-LAST:event_Menu_2MousePressed
 
     private void Menu_3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu_3MousePressed
-        pesanan_frame.setBackground(DefaultColor);
+        produk_frame.setBackground(DefaultColor);
         Menu_2.setBackground(DefaultColor);
         Menu_3.setBackground(ClickedColor);
         Menu_4.setBackground(DefaultColor);
@@ -324,7 +324,7 @@ public class homepage extends javax.swing.JFrame {
     }//GEN-LAST:event_Menu_3MousePressed
 
     private void Menu_4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu_4MousePressed
-        pesanan_frame.setBackground(DefaultColor);
+        produk_frame.setBackground(DefaultColor);
         Menu_2.setBackground(DefaultColor);
         Menu_3.setBackground(DefaultColor);
         Menu_4.setBackground(ClickedColor);
@@ -333,7 +333,7 @@ public class homepage extends javax.swing.JFrame {
     }//GEN-LAST:event_Menu_4MousePressed
 
     private void Menu_5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu_5MousePressed
-        pesanan_frame.setBackground(DefaultColor);
+        produk_frame.setBackground(DefaultColor);
         Menu_2.setBackground(DefaultColor);
         Menu_3.setBackground(DefaultColor);
         Menu_4.setBackground(DefaultColor);
@@ -342,7 +342,7 @@ public class homepage extends javax.swing.JFrame {
     }//GEN-LAST:event_Menu_5MousePressed
 
     private void Menu_6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu_6MousePressed
-        pesanan_frame.setBackground(DefaultColor);
+        produk_frame.setBackground(DefaultColor);
         Menu_2.setBackground(DefaultColor);
         Menu_3.setBackground(DefaultColor);
         Menu_4.setBackground(DefaultColor);
@@ -350,13 +350,13 @@ public class homepage extends javax.swing.JFrame {
         Menu_6.setBackground(ClickedColor);
     }//GEN-LAST:event_Menu_6MousePressed
 
-    private void pesanan_frameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pesanan_frameMouseClicked
+    private void produk_frameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_produk_frameMouseClicked
 
-        pesanan_frame pesanan_frame1=new pesanan_frame ();
+        produk_frame pesanan_frame1=new produk_frame ();
         jDesktopPane1.removeAll();
         jDesktopPane1.add(pesanan_frame1).setVisible(true);
            
-    }//GEN-LAST:event_pesanan_frameMouseClicked
+    }//GEN-LAST:event_produk_frameMouseClicked
 
     private void StatsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StatsMouseClicked
         
@@ -429,7 +429,7 @@ public class homepage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel pesanan_frame;
+    private javax.swing.JPanel produk_frame;
     // End of variables declaration//GEN-END:variables
 
 }
