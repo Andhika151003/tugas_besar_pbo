@@ -37,8 +37,6 @@ public class SignupPage extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        stats = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         fname = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -114,8 +112,6 @@ public class SignupPage extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(31, 41, 130));
         jLabel2.setText("Sign Up");
 
-        jLabel3.setText("Status :");
-
         jLabel4.setText("Full Name :");
 
         jLabel5.setText("Alamat : ");
@@ -163,14 +159,16 @@ public class SignupPage extends javax.swing.JFrame {
                         .addComponent(jLabel2))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(Signupbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Signupbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addComponent(jLabel9)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(stats, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(fname, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(fname, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
                                     .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(alamat, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,11 +176,7 @@ public class SignupPage extends javax.swing.JFrame {
                                     .addComponent(email, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(password, javax.swing.GroupLayout.Alignment.LEADING)))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(password, javax.swing.GroupLayout.Alignment.LEADING))))))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -190,11 +184,7 @@ public class SignupPage extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(stats, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(16, 16, 16)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -214,13 +204,13 @@ public class SignupPage extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(Signupbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel3);
@@ -244,7 +234,7 @@ public class SignupPage extends javax.swing.JFrame {
 
     private void SignupbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignupbuttonActionPerformed
         //System.out.println("Sign Up Button Has Clicked!");
-        String Stats, FullName, Alamat, Nomortelpon, Email, Password, query;
+        String FullName, Alamat, Nomortelpon, Email, Password, query;
         String SUrl, SUser, Spass;
             SUrl = "jdbc:MySQL://localhost:3306/icrbfinal";
             SUser = "root";
@@ -253,9 +243,7 @@ public class SignupPage extends javax.swing.JFrame {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(SUrl, SUser, Spass);
             Statement st = con.createStatement();
-            if("".equals(stats.getText())) {
-                JOptionPane.showMessageDialog(new JFrame(), "Status Harus di Isi", "Error", JOptionPane.ERROR_MESSAGE);
-            } else if ("".equals(fname.getText())) {
+            if ("".equals(fname.getText())) {
                 JOptionPane.showMessageDialog(new JFrame(), "Nama Harus di Isi", "Error", JOptionPane.ERROR_MESSAGE);
             } else if ("".equals(alamat.getText())) {
                 JOptionPane.showMessageDialog(new JFrame(), "Alamat Harus di Isi", "Error", JOptionPane.ERROR_MESSAGE);
@@ -266,7 +254,6 @@ public class SignupPage extends javax.swing.JFrame {
             } else if ("".equals(password.getText())) {
                 JOptionPane.showMessageDialog(new JFrame(), "Password Harus di Isi", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
-                Stats = stats.getText();
                 FullName = fname.getText();
                 Alamat = alamat.getText();
                 Nomortelpon = nomortelepon.getText();
@@ -274,10 +261,9 @@ public class SignupPage extends javax.swing.JFrame {
                 Password = password.getText();
                 System.out.println(Password);
                 
-                query = "INSERT INTO akun(Stats, Nama, Alamat, Nomortelpon, Email, Password)" +
-                        "VALUES('"+Stats+"','"+FullName+"','"+Alamat+"','"+Nomortelpon+"','"+Email+"','"+Password+"')";
+                query = "INSERT INTO akun(Nama, Alamat, Nomortelpon, Email, Password)" +
+                        "VALUES('"+FullName+"','"+Alamat+"','"+Nomortelpon+"','"+Email+"','"+Password+"')";
                 st.execute(query);
-                stats.setText("");
                 fname.setText("");
                 alamat.setText("");
                 nomortelepon.setText("");
@@ -316,7 +302,6 @@ public class SignupPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -328,6 +313,5 @@ public class SignupPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField nomortelepon;
     private javax.swing.JPasswordField password;
-    private javax.swing.JTextField stats;
     // End of variables declaration//GEN-END:variables
 }
