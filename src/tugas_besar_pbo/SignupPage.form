@@ -183,12 +183,12 @@
                                           <Component id="fname" alignment="0" pref="349" max="32767" attributes="0"/>
                                           <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="alamat" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="nomortelepon" alignment="0" max="32767" attributes="0"/>
                                           <Component id="email" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel7" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
                                           <Component id="password" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jLabel7" alignment="0" min="-2" pref="48" max="-2" attributes="0"/>
+                                          <Component id="jLabel8" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
+                                          <Component id="jLabel6" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
