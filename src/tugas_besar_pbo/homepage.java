@@ -55,13 +55,14 @@ public class homepage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dashboard_Admin");
-        setPreferredSize(new java.awt.Dimension(900, 600));
+        setPreferredSize(new java.awt.Dimension(1100, 800));
 
-        Jpanel1.setPreferredSize(new java.awt.Dimension(800, 500));
+        Jpanel1.setPreferredSize(new java.awt.Dimension(1100, 800));
         Jpanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(234, 234, 234));
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1100, 50));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         LogoutButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\andhi\\OneDrive\\Dokumen\\images\\icons8-cross-48 (1).png")); // NOI18N
@@ -71,7 +72,7 @@ public class homepage extends javax.swing.JFrame {
                 LogoutButtonMouseClicked(evt);
             }
         });
-        jPanel1.add(LogoutButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, 44, -1));
+        jPanel1.add(LogoutButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 0, 44, -1));
 
         Stats.setIcon(new javax.swing.ImageIcon("C:\\Users\\andhi\\OneDrive\\Dokumen\\images\\profile.png")); // NOI18N
         Stats.setText("Admin");
@@ -90,12 +91,13 @@ public class homepage extends javax.swing.JFrame {
         jPanel1.add(User, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 100, -1));
 
         jLabel2.setText("Logout");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 20, -1, -1));
 
-        Jpanel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
+        Jpanel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, -1));
 
         jPanel2.setBackground(new java.awt.Color(31, 41, 130));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.setPreferredSize(new java.awt.Dimension(180, 600));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         DPesanan.setBackground(new java.awt.Color(255, 255, 255));
@@ -156,7 +158,7 @@ public class homepage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("SimSun", 0, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("©Barbershop Bogor");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 730, -1, -1));
 
         Pembayaran.setBackground(new java.awt.Color(255, 255, 255));
         Pembayaran.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -186,6 +188,9 @@ public class homepage extends javax.swing.JFrame {
 
         Pesanan.setBackground(new java.awt.Color(255, 255, 255));
         Pesanan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PesananMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 PesananMousePressed(evt);
             }
@@ -236,35 +241,34 @@ public class homepage extends javax.swing.JFrame {
 
         jPanel2.add(Feedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 170, -1));
 
-        Jpanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 600));
+        Jpanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 800));
 
         jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
-        jDesktopPane1.setPreferredSize(new java.awt.Dimension(900, 600));
+        jDesktopPane1.setMinimumSize(new java.awt.Dimension(56, 13));
+        jDesktopPane1.setPreferredSize(new java.awt.Dimension(1100, 800));
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 710, Short.MAX_VALUE)
+            .addGap(0, 1310, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 550, Short.MAX_VALUE)
+            .addGap(0, 750, Short.MAX_VALUE)
         );
 
-        Jpanel1.add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 710, 550));
+        Jpanel1.add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 1310, 750));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Jpanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 896, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(Jpanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Jpanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(Jpanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -344,6 +348,12 @@ public class homepage extends javax.swing.JFrame {
         DPesanan.setBackground(DefaultColor);    
         Pembayaran.setBackground(ClickedColor);
     }//GEN-LAST:event_PembayaranMousePressed
+
+    private void PesananMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PesananMouseClicked
+        pesananframe pesanan_frame1=new pesananframe ();
+        jDesktopPane1.removeAll();
+        jDesktopPane1.add(pesanan_frame1).setVisible(true);
+    }//GEN-LAST:event_PesananMouseClicked
     public void setUser(String Name) {
         User.setText(Name);
     }
