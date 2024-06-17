@@ -203,8 +203,7 @@ public class LoginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void LoginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginbuttonActionPerformed
-   //System.out.println("Sign Up Button Has Clicked!");
-        //System.out.println("Sign Up Button Has Clicked!");
+
         String Email, Password, query, fname = null, passDB = null;
         String SUrl, SUser, Spass;
             SUrl = "jdbc:MySQL://localhost:3306/icrbfinal";

@@ -1,10 +1,6 @@
 package tugas_besar_pbo;
 
 import java.awt.Color;
-import javax.swing.JOptionPane;
-
-
-
 
 public class homepage extends javax.swing.JFrame {
 
@@ -35,10 +31,8 @@ public class homepage extends javax.swing.JFrame {
 
         Jpanel1 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        LogoutButton = new javax.swing.JLabel();
         Stats = new javax.swing.JLabel();
         User = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         DPesanan = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -55,24 +49,16 @@ public class homepage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dashboard_Admin");
-        setPreferredSize(new java.awt.Dimension(1100, 800));
+        setPreferredSize(new java.awt.Dimension(800, 600));
 
-        Jpanel1.setPreferredSize(new java.awt.Dimension(1100, 800));
+        Jpanel1.setPreferredSize(new java.awt.Dimension(800, 600));
         Jpanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(234, 234, 234));
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1100, 50));
+        jPanel1.setMinimumSize(new java.awt.Dimension(800, 50));
+        jPanel1.setPreferredSize(new java.awt.Dimension(800, 50));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        LogoutButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\andhi\\OneDrive\\Dokumen\\images\\icons8-cross-48 (1).png")); // NOI18N
-        LogoutButton.setText("jLabel2");
-        LogoutButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LogoutButtonMouseClicked(evt);
-            }
-        });
-        jPanel1.add(LogoutButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 0, 44, -1));
 
         Stats.setIcon(new javax.swing.ImageIcon("C:\\Users\\andhi\\OneDrive\\Dokumen\\images\\profile.png")); // NOI18N
         Stats.setText("Admin");
@@ -90,10 +76,7 @@ public class homepage extends javax.swing.JFrame {
         User.setText("user");
         jPanel1.add(User, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 100, -1));
 
-        jLabel2.setText("Logout");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 20, -1, -1));
-
-        Jpanel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, -1));
+        Jpanel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(31, 41, 130));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -158,7 +141,7 @@ public class homepage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("SimSun", 0, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("©Barbershop Bogor");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 730, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, -1, -1));
 
         Pembayaran.setBackground(new java.awt.Color(255, 255, 255));
         Pembayaran.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -181,7 +164,7 @@ public class homepage extends javax.swing.JFrame {
         );
         PembayaranLayout.setVerticalGroup(
             PembayaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pembayaran1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+            .addComponent(pembayaran1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jPanel2.add(Pembayaran, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 170, -1));
@@ -241,30 +224,32 @@ public class homepage extends javax.swing.JFrame {
 
         jPanel2.add(Feedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 170, -1));
 
-        Jpanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 800));
+        Jpanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 190, 590));
 
         jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
         jDesktopPane1.setMinimumSize(new java.awt.Dimension(56, 13));
-        jDesktopPane1.setPreferredSize(new java.awt.Dimension(1100, 800));
+        jDesktopPane1.setPreferredSize(new java.awt.Dimension(800, 600));
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1310, Short.MAX_VALUE)
+            .addGap(0, 610, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
+            .addGap(0, 550, Short.MAX_VALUE)
         );
 
-        Jpanel1.add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 1310, 750));
+        Jpanel1.add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 610, 550));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Jpanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Jpanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -273,24 +258,6 @@ public class homepage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void LogoutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutButtonMouseClicked
-        int response = JOptionPane.showConfirmDialog(
-        this, 
-        "Apakah Anda Yakin Ingin Keluar?", 
-        "Confirm Logout", 
-        JOptionPane.YES_NO_OPTION, 
-        JOptionPane.QUESTION_MESSAGE
-    );
-
-    if (response == JOptionPane.YES_OPTION) {
-        LoginPage loginPage = new LoginPage();
-        loginPage.setVisible(true);
-        loginPage.pack();
-        loginPage.setLocationRelativeTo(null);
-        this.dispose();
-    }
-    }//GEN-LAST:event_LogoutButtonMouseClicked
 
     private void layanan_frameMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_layanan_frameMousePressed
         layanan_frame.setBackground(ClickedColor);
@@ -400,14 +367,12 @@ public class homepage extends javax.swing.JFrame {
     private javax.swing.JPanel DPesanan;
     private javax.swing.JPanel Feedback;
     private javax.swing.JPanel Jpanel1;
-    private javax.swing.JLabel LogoutButton;
     private javax.swing.JPanel Pembayaran;
     private javax.swing.JPanel Pesanan;
     private javax.swing.JLabel Stats;
     private javax.swing.JLabel User;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
