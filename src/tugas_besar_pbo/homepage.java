@@ -12,10 +12,7 @@ public class homepage extends javax.swing.JFrame {
         ClickedColor=new Color(204,204,204);
         
         layanan_frame.setBackground(DefaultColor);
-        Pesanan.setBackground(DefaultColor);
         Feedback.setBackground(DefaultColor);
-        DPesanan.setBackground(DefaultColor);
-        Pembayaran.setBackground(DefaultColor);
         
         Stats.setBackground(DefaultColor);
     }
@@ -34,15 +31,9 @@ public class homepage extends javax.swing.JFrame {
         Stats = new javax.swing.JLabel();
         User = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        DPesanan = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
         layanan_frame = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        Pembayaran = new javax.swing.JPanel();
-        pembayaran1 = new javax.swing.JLabel();
-        Pesanan = new javax.swing.JPanel();
-        pembayaran = new javax.swing.JLabel();
         Feedback = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jDesktopPane1 = new javax.swing.JDesktopPane();
@@ -76,38 +67,12 @@ public class homepage extends javax.swing.JFrame {
         User.setText("user");
         jPanel1.add(User, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 100, -1));
 
-        Jpanel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        Jpanel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, -1));
 
         jPanel2.setBackground(new java.awt.Color(31, 41, 130));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setPreferredSize(new java.awt.Dimension(180, 600));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        DPesanan.setBackground(new java.awt.Color(255, 255, 255));
-        DPesanan.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                DPesananMousePressed(evt);
-            }
-        });
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\andhi\\OneDrive\\Dokumen\\images\\icons8-menu-24.png")); // NOI18N
-        jLabel5.setText("Detail Pesanan");
-
-        javax.swing.GroupLayout DPesananLayout = new javax.swing.GroupLayout(DPesanan);
-        DPesanan.setLayout(DPesananLayout);
-        DPesananLayout.setHorizontalGroup(
-            DPesananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DPesananLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addContainerGap(57, Short.MAX_VALUE))
-        );
-        DPesananLayout.setVerticalGroup(
-            DPesananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(DPesanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 170, -1));
 
         layanan_frame.setBackground(new java.awt.Color(255, 255, 255));
         layanan_frame.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -141,62 +106,7 @@ public class homepage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("SimSun", 0, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("©Barbershop Bogor");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, -1, -1));
-
-        Pembayaran.setBackground(new java.awt.Color(255, 255, 255));
-        Pembayaran.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                PembayaranMousePressed(evt);
-            }
-        });
-
-        pembayaran1.setIcon(new javax.swing.ImageIcon("C:\\Users\\andhi\\OneDrive\\Dokumen\\images\\icons8-menu-24.png")); // NOI18N
-        pembayaran1.setText("Pembayaran");
-
-        javax.swing.GroupLayout PembayaranLayout = new javax.swing.GroupLayout(Pembayaran);
-        Pembayaran.setLayout(PembayaranLayout);
-        PembayaranLayout.setHorizontalGroup(
-            PembayaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PembayaranLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pembayaran1)
-                .addContainerGap(70, Short.MAX_VALUE))
-        );
-        PembayaranLayout.setVerticalGroup(
-            PembayaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pembayaran1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-
-        jPanel2.add(Pembayaran, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 170, -1));
-
-        Pesanan.setBackground(new java.awt.Color(255, 255, 255));
-        Pesanan.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                PesananMouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                PesananMousePressed(evt);
-            }
-        });
-
-        pembayaran.setIcon(new javax.swing.ImageIcon("C:\\Users\\andhi\\OneDrive\\Dokumen\\images\\icons8-menu-24.png")); // NOI18N
-        pembayaran.setText("Pesanan");
-
-        javax.swing.GroupLayout PesananLayout = new javax.swing.GroupLayout(Pesanan);
-        Pesanan.setLayout(PesananLayout);
-        PesananLayout.setHorizontalGroup(
-            PesananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PesananLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pembayaran)
-                .addContainerGap(92, Short.MAX_VALUE))
-        );
-        PesananLayout.setVerticalGroup(
-            PesananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pembayaran, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(Pesanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 170, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
 
         Feedback.setBackground(new java.awt.Color(255, 255, 255));
         Feedback.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -222,7 +132,7 @@ public class homepage extends javax.swing.JFrame {
             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
         );
 
-        jPanel2.add(Feedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 170, -1));
+        jPanel2.add(Feedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 170, -1));
 
         Jpanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 190, 590));
 
@@ -234,22 +144,20 @@ public class homepage extends javax.swing.JFrame {
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 610, Short.MAX_VALUE)
+            .addGap(0, 930, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 550, Short.MAX_VALUE)
         );
 
-        Jpanel1.add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 610, 550));
+        Jpanel1.add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 930, 550));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Jpanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(Jpanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1120, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -261,35 +169,13 @@ public class homepage extends javax.swing.JFrame {
 
     private void layanan_frameMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_layanan_frameMousePressed
         layanan_frame.setBackground(ClickedColor);
-        Pesanan.setBackground(DefaultColor);
         Feedback.setBackground(DefaultColor);
-        DPesanan.setBackground(DefaultColor); 
-        Pembayaran.setBackground(DefaultColor);
     }//GEN-LAST:event_layanan_frameMousePressed
-
-    private void PesananMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PesananMousePressed
-        layanan_frame.setBackground(DefaultColor);
-        Pesanan.setBackground(ClickedColor);
-        Feedback.setBackground(DefaultColor);
-        DPesanan.setBackground(DefaultColor);  
-        Pembayaran.setBackground(DefaultColor);
-    }//GEN-LAST:event_PesananMousePressed
 
     private void FeedbackMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FeedbackMousePressed
         layanan_frame.setBackground(DefaultColor);
-        Pesanan.setBackground(DefaultColor);
         Feedback.setBackground(ClickedColor);
-        DPesanan.setBackground(DefaultColor);  
-        Pembayaran.setBackground(DefaultColor);
     }//GEN-LAST:event_FeedbackMousePressed
-
-    private void DPesananMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DPesananMousePressed
-        layanan_frame.setBackground(DefaultColor);
-        Pesanan.setBackground(DefaultColor);
-        Feedback.setBackground(DefaultColor);
-        DPesanan.setBackground(ClickedColor);    
-        Pembayaran.setBackground(DefaultColor);
-    }//GEN-LAST:event_DPesananMousePressed
 
     private void layanan_frameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_layanan_frameMouseClicked
         layananframe layanan_frame1=new layananframe ();
@@ -298,7 +184,7 @@ public class homepage extends javax.swing.JFrame {
     }//GEN-LAST:event_layanan_frameMouseClicked
 
     private void StatsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StatsMouseClicked
-        profileframe profile_frame1=new profileframe ();
+        profilFrame profile_frame1=new profilFrame ();
         jDesktopPane1.removeAll();
         jDesktopPane1.add(profile_frame1).setVisible(true);
         
@@ -307,20 +193,6 @@ public class homepage extends javax.swing.JFrame {
     private void StatsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StatsMousePressed
         Stats.setBackground(ClickedColor);
     }//GEN-LAST:event_StatsMousePressed
-
-    private void PembayaranMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PembayaranMousePressed
-        layanan_frame.setBackground(DefaultColor);
-        Pesanan.setBackground(DefaultColor);
-        Feedback.setBackground(DefaultColor);
-        DPesanan.setBackground(DefaultColor);    
-        Pembayaran.setBackground(ClickedColor);
-    }//GEN-LAST:event_PembayaranMousePressed
-
-    private void PesananMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PesananMouseClicked
-        pesananframe pesanan_frame1=new pesananframe ();
-        jDesktopPane1.removeAll();
-        jDesktopPane1.add(pesanan_frame1).setVisible(true);
-    }//GEN-LAST:event_PesananMouseClicked
     public void setUser(String Name) {
         User.setText(Name);
     }
@@ -364,23 +236,17 @@ public class homepage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel DPesanan;
     private javax.swing.JPanel Feedback;
     private javax.swing.JPanel Jpanel1;
-    private javax.swing.JPanel Pembayaran;
-    private javax.swing.JPanel Pesanan;
     private javax.swing.JLabel Stats;
     private javax.swing.JLabel User;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel layanan_frame;
-    private javax.swing.JLabel pembayaran;
-    private javax.swing.JLabel pembayaran1;
     // End of variables declaration//GEN-END:variables
 
 }
