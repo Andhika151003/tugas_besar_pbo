@@ -235,7 +235,7 @@ public class SignupPage extends javax.swing.JFrame {
         //System.out.println("Sign Up Button Has Clicked!");
         String FullName, Alamat, Nomortelpon, Email, Password, query;
         String SUrl, SUser, Spass;
-            SUrl = "jdbc:MySQL://localhost:3306/icrbfinal";
+            SUrl = "jdbc:MySQL://localhost:3306/institutcrb";
             SUser = "root";
             Spass = "";
         try {

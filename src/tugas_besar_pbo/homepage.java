@@ -110,6 +110,9 @@ public class homepage extends javax.swing.JFrame {
 
         Feedback.setBackground(new java.awt.Color(255, 255, 255));
         Feedback.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FeedbackMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 FeedbackMousePressed(evt);
             }
@@ -193,6 +196,12 @@ public class homepage extends javax.swing.JFrame {
     private void StatsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StatsMousePressed
         Stats.setBackground(ClickedColor);
     }//GEN-LAST:event_StatsMousePressed
+
+    private void FeedbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FeedbackMouseClicked
+        feedbackframe feedback_frame1=new feedbackframe ();
+        jDesktopPane1.removeAll();
+        jDesktopPane1.add(feedback_frame1).setVisible(true);
+    }//GEN-LAST:event_FeedbackMouseClicked
     public void setUser(String Name) {
         User.setText(Name);
     }

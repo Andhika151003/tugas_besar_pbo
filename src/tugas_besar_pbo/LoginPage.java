@@ -206,7 +206,7 @@ public class LoginPage extends javax.swing.JFrame {
 
         String Email, Password, query, fname = null, passDB = null;
         String SUrl, SUser, Spass;
-            SUrl = "jdbc:MySQL://localhost:3306/icrbfinal";
+            SUrl = "jdbc:MySQL://localhost:3306/institutcrb";
             SUser = "root";
             Spass = "";
             int notFound = 0;
